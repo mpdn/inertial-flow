@@ -1,0 +1,36 @@
+[package]
+authors = ["Mike Pedersen <mike@mikepedersen.dk>"]
+edition = "2018"
+name = "inertial-flow"
+version = "0.1.0"
+
+[features]
+bench = []
+
+[lib]
+name = "inertial_flow"
+
+[dependencies]
+arrayvec = "0.4.11"
+fixedbitset = "0.1.9"
+fxhash = "0.2.1"
+itertools = "0.8.0"
+num-rational = "0.2.2"
+ordered-float = "1.0.2"
+partition = "0.1.1"
+pdqselect = "0.1.0"
+rayon = "1.0.3"
+thread_local = "0.3.6"
+
+[dev-dependencies]
+criterion = "0.2.11"
+quickcheck = "0.4.1"
+osmpbfreader = "0.13.0"
+
+[dependencies.petgraph]
+version = "0.4.13"
+features = ["quickcheck"]
+
+[[bench]]
+name = "bench"
+harness = false
